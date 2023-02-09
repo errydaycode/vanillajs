@@ -16,7 +16,7 @@ export type HouseType={
 
 
 
-type governmentBuildings ={
+export type governmentBuildings ={
     type: "HOSPITAL" | "FIRE-STATION"
     budget: number
     staffCount: number
