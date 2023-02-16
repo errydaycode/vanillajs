@@ -9,6 +9,7 @@ type AddressType={
 }
 
 export type HouseType={
+    id?: number
     buildedAt: number
     repaired: boolean
     address: AddressType
@@ -25,6 +26,7 @@ export type governmentBuildings ={
 
 
 export type CityType={
+
     title: string
     houses: Array<HouseType>
     governmentBuildings: Array<governmentBuildings>
