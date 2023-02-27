@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export type PropsValueType={
     name: string
     age: number
-    addresses: Array<{adress: number}>
+    addresses: Array<{adress: string; street?: string}>
     dreams: {
         countries: {
             country: string
@@ -18,9 +18,18 @@ type PropsType = {
     car : {model: string}
 }
 
+function myUseState (m: string) {
+    return [m, function () {}]
+}
+function myUseState1 (m: string) {
+    return {message: "m",
+        setMessage: function () {}
+    }
+}
+
 export const ManComponent: React.FC<PropsType> = ({title, man, ...props}) => {
 
-
+      const [message, setMessage] = myUseState('hello')
 
     return (
         <div>
