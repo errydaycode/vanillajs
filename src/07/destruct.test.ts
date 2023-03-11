@@ -1,55 +1,50 @@
-import {ManType} from "../05/05_01";
-import {PropsValueType} from "./Desctructuring";
+import {Man2Type} from "./Desctructuring";
 
 
-
-
-let props: PropsValueType;
-
-beforeEach(()=> {
+let props : Man2Type;
+beforeEach(()=>{
     props = {
-        name: 'Georgii',
-        age: 26,
-        addresses: [ {adress: "1703"} , {adress: "241"} , {adress: "453" , street: 'berezovaya'} ],
-        dreams: {
-            countries: {
-                country: 'USA'
+        name : 'Dimych',
+        age: 32,
+        lessons : [{title: '1'}, {title: '2'}, {title: '3', name: 'react'}],
+        address : {
+            street : {
+                title: 'Nezavisimosti street'
             }
         }
+
     }
 })
 
 
-test("aa",()=>{
-   // const age = props.age
-   //const addresses = props.addresses
-    const {age, addresses} = props;
-    const {country} = props.dreams.countries
-    expect(age).toBe(26)
-    expect(addresses.length).toBe(3)
-    expect(country).toBe('USA')
+test('', ()=> {
+
+    // const age = props.age
+    // const lessons = props.lessons
+
+    const {age, lessons} = props
+    const {title} = props.address.street
+
+
+    expect(age).toBe(32)
+    expect(lessons.length).toBe(3)
+    expect(title).toBe('Nezavisimosti street')
 })
 
-test("bb",()=>{
-
-/*const ad1 = props.addresses[0]
-const ad2 = props.addresses[1]*/
 
 
-    const [,add1 ,...restAdd] = props.addresses
+test('b', ()=> {
+    const l1 = props.lessons[0]
+    const l2 = props.lessons[1]
 
+    const [,ls2, ...restLessons] = props.lessons
+    expect(restLessons.length).toBe(1)
 
-/*
-    expect(ad1.adress).toBe("1703")
-    expect(ad2.adress).toBe("241")*/
-    expect(restAdd.length).toBe(1)
-    /*expect(restAdd[0].adress).toBe('241')*/
-    expect(restAdd[0].street).toBe('berezovaya')
-    expect(restAdd[0]).toStrictEqual({adress: "453" , street: 'berezovaya'})
-
-    /*expect(add.adress).toBe("1703")*/
-
-
-
-
+    expect(l1.title).toBe('1')
+    expect(l2.title).toBe('2')
+    // expect(ls1.title).toBe('1')
+    // expect(ls2.title).toBe('2')
+    expect(ls2.title).toBe('2')
+    expect(restLessons[0].name).toBe('react')
+    expect(restLessons[0]).toStrictEqual({title: '3', name: 'react'})
 })

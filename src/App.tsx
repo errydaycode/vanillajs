@@ -5,7 +5,12 @@ import './App.css';
 function App() {
   const names = ["Dimych", "Sveta", "Ivan", "Daniil", "Ignat", "Viktor"]
   const users = [
-    {name: "Dimych"},{name: "Sveta"},{name: "Ivan"},{name: "Daniil"},{name: "Ignat"},{name: "Viktor"},
+    {name: "Dimych"},
+    {name: "Sveta"},
+    {name: "Ivan"},
+    {name: "Daniil"},
+    {name: "Ignat"},
+    {name: "Viktor"}
   ]
   const liNames = users.map((n, index)=> <li key={index}>{index} - {n.name}</li>)
   return (
