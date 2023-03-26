@@ -1,15 +1,23 @@
+import {Man2Type, PropsType} from "./Desctructuring";
 
-test('',()=> {
-    let props = {
+
+let props: Man2Type;
+
+beforeEach(()=> {
+    props = {
         name: 'Dimych',
         age: 32,
         lessons : [{title: '1'}, {title: '2'}],
         address : {
-             street : {
-                 title: 'Nezavisimosti street'
-             }
-         }
+            street : {
+                title: 'Nezavisimosti street'
+            }
+        }
     }
+})
+
+
+test('',()=> {
 
 
     //const age = props.age
@@ -30,6 +38,15 @@ test('',()=> {
 
     expect(title).toBe('Nezavisimosti street')
 })
+
+
+test('f', ()=> {
+
+
+
+
+})
+
 
 
 

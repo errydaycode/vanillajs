@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React, {useState} from "react";
 
 export type Man2Type={
     name: string
@@ -16,7 +16,7 @@ type LessonsType={
 }
 
 
-type PropsType ={
+export type PropsType ={
     title: string
     man: Man2Type
     food: Array<string>
@@ -26,16 +26,34 @@ type PropsType ={
 
 export const ManComponent: React.FC<PropsType> = ( {title , man, ...props}) => {
 
-    // const [message, setMessage]= useState<string>('hello')
 
-    return <div>
-        <h1>{title}</h1>
-        <hr/>
+    return (
         <div>
-            {props.car.model}
+            <h1>{title}</h1>
+            <hr/>
+            <div>
+                {man.name}
+            </div>
+            <div>
+                {props.car.model}
+            </div>
         </div>
-        <div>
-            {man.name}
-        </div>
-    </div>
+    )
 }
+
+
+// export const ManComponent: React.FC<PropsType> = ( {title , man, ...props}) => {
+//
+//     // const [message, setMessage]= useState<string>('hello')
+//
+//     return <div>
+//         <h1>{title}</h1>
+//         <hr/>
+//         <div>
+//             {props.car.model}
+//         </div>
+//         <div>
+//             {man.name}
+//         </div>
+//     </div>
+// }
