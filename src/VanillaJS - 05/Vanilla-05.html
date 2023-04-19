@@ -7,71 +7,80 @@
 <body>
 
 
-    <script>
-        const mentors = [
+<script>
+    const mentors = [
         {id: 'id100', title: 'Dimych', 'my salary': 10}, //0
         {id: 'id20222', title: 'Viktor', 'my salary': 100}, //1
         {id: 'id323242', title: 'Valera', 'my salary': 100}, //2
         {id: 'id489829898989', title: 'Artem', 'my salary': 100}, //3
-        ]
+    ]
 
-        const artemId = 'id489829898989'
+    const artemId = 'id489829898989'
 
-        const mentor1 = mentors.find(m => m.id === artemId)
-        const mentor2 = mentors[3]
+    const mentor1 = mentors.find(m => m.id === artemId)
+    const mentor2 = mentors[3]
 
-        mentor1['my salary'] = 50 // 1й вариант использования square brackets notation : не валидное название ключа
-        console.log(mentor1["id"])
+    mentor1['my salary'] = 50 // 1й вариант использования square brackets notation : не валидное название ключа
+    console.log(mentor1["id"])
 
-        const key = "title";
-        const value = "Svetlana";
+    const key = "title";
+    const value = "Svetlana";
 
-        mentor1[key] = value // 2й вариант использования, когда нам нужно взять значение ключа из переменной
-        mentor1.title = 'Svetlana'// строки 38 и 39 идентичны, но разный синтаксис
-
-
-        const students =[
-            {id: 'id100', title: 'Andrew'}, //0
-            {id: 'id2', title: 'Anna'}, //1
-            {id: 'id4', title: 'Sasha'}, //2
-            //....
-            {id: 'id1000000',
-                title: 'Marina',
-                technologies: [
-                    {id: 1, title: 'CSS'},
-                    {id: 2, title: 'HTML'},
-                    {id: 3, title: 'JS'},
-                    {id: 4, title: 'React'}
-                ]
-            }
-        ]
-
-        const marina = students.find(s=> s.id === 'id1000000')
-        const tech = marina.technologies.find(t=> t.id === 4)
-        tech.title = 'React'
+    mentor1[key] = value // 2й вариант использования, когда нам нужно взять значение ключа из переменной
+    mentor1.title = 'Svetlana'// строки 38 и 39 идентичны, но разный синтаксис
 
 
-
-        const studentsObj ={
-            'id100' : {id: 'id100', title: 'Andrew'},
-            'id2' : {id: 'id2', title: 'Anna'},
-            'id4': {id: 'id4', title: 'Sasha'},
-            //....
-            'id1000000': {
-                id: 'id1000000',
-                title: 'Marina',
-                technologies: [
-                    {id: 1, title: 'CSS'},
-                    {id: 2, title: 'HTML'},
-                    {id: 3, title: 'JS'},
-                    {id: 4, title: 'React'}
-                ]
-            }
+    const students = [
+        {id: 'id100', title: 'Andrew'}, //0
+        {id: 'id2', title: 'Anna'}, //1
+        {id: 'id4', title: 'Sasha'}, //2
+        //....
+        {
+            id: 'id1000000',
+            title: 'Marina',
+            technologies: [
+                {id: 1, title: 'CSS'},
+                {id: 2, title: 'HTML'},
+                {id: 3, title: 'JS'},
+                {id: 4, title: 'React'}
+            ]
         }
+    ]
 
-        const marina2 = studentsObj['id1000000']
-        marina2.title += ' Sun'
-    </script>
+     const marina = students.find(s=> s.id === 'id1000000')
+        marina.title += " Sun"
+    // const tech = marina.technologies.find(t=> t.id === 4)
+    // tech.title = 'React'
+
+
+
+
+    const studentsObj = {
+        'id100': {id: 'id100', title: 'Andrew'},
+        'id2': {id: 'id2', title: 'Anna'},
+        'id4': {id: 'id4', title: 'Sasha'},
+        //....
+        'id1000000': {
+            id: 'id1000000',
+            title: 'Marina',
+            technologies: {
+                '1': {id: 1, title: 'CSS'},
+                '2': {id: 2, title: 'HTML'},
+                '3': {id: 3, title: 'JS'},
+                '4': {id: 4, title: 'React'}
+            }
+
+        }
+    }
+
+    const marina2 = studentsObj['id1000000']
+    const tech2 = marina2.technologies['4']
+    tech2.title = 'Vue'
+
+    studentsObj['id1000000'].technologies['4'].title = 'Angular'
+
+
+</script>
 
 </body>
 </html>

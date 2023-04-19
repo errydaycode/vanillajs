@@ -7,11 +7,11 @@ import {splitIntoWords} from "./01-hello-tests/01";
 // import {User} from "./06/06-callbacks";
 
 
-const sentence = 'Hello my friends!';
-const res =  splitIntoWords(sentence)
-console.log(res[0] === 'hellow')
-console.log(res[1] === 'my')
-console.log(res[2] === 'friends')
+// const sentence = 'Hello my friends!';
+// const res =  splitIntoWords(sentence)
+// console.log(res[0] === 'hellow')
+// console.log(res[1] === 'my')
+// console.log(res[2] === 'friends')
 
 
 const root = ReactDOM.createRoot(

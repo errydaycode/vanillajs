@@ -17,20 +17,20 @@ export type UsersType = {
     [key: string] : {id: number, name: string}
 }
 
-export const users: UsersType = {
+export const users4: UsersType = {
     '101': {id: 101, name: 'Dimych'},
     '53321': {id: 53321, name: 'Natasha'},
     '1121': {id: 1121, name: 'Valera'},
     '1': {id: 1, name: 'Katya'}
 }
 
-// console.log(users["1"]) -доставать
-let user = {id: 100500, name: 'Igor'}
-users[user.id]  = user // добавляем пользователя в массив
-delete users[user.id]
-users[user.id].name = 'Vitya'
+// users[1]
 
+let user16 = {id: 100500, name: "Igor"}
 
+users4[user16.id] = user16
+delete users4[user16.id]
+users4[user16.id].name = 'Viktor'
 
 export const usersArray = [
     {id: 101, name: 'Dimych'},
@@ -39,8 +39,9 @@ export const usersArray = [
     {id: 1, name: 'Katya'}
 ]
 
+
 // usersArray.find(u => u.id === 1) - доставать
 
-// let usersCopy = [...usersArray.filter(el => el.id !== user.id), user] // добавление пользователя
+// let usersCopy = [...usersArray.filter(el => el.id !== user16.id), user] // добавление пользователя
 
 // var usersArray = usersArray.filter(u => u.id !== user.id)
