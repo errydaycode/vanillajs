@@ -81,3 +81,16 @@ export function addCompany(user: UserWithLaptopType  & WithCompaniesType, google
         companies: [...user.companies, {id: 3, title: google}]
     }
 }
+
+export function updateCompanyTitle(u: UserWithLaptopType  & WithCompaniesType, id: number, newTitle: string) {
+    return {
+        ...u, companies: u.companies.map(c=> c.id === id ? {...c, title: newTitle} : c)
+    }
+}
+
+export function updateCompanyTitle2(companies: {[key: string] : CompanyType[]}, userName: string, companyId: number, newTitle: string) {
+    let companyCopy = {...companies}
+    companyCopy[userName] = companyCopy[userName].map( c => c.id === companyId ? {...c, title:newTitle} : c)
+
+    return companyCopy
+}
