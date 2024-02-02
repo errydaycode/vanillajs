@@ -4,6 +4,7 @@ import './App.css';
 import {log} from "util";
 import {Simulate} from "react-dom/test-utils";
 import error = Simulate.error;
+import fetch from "node-fetch-native";
 
 function App() {
 
@@ -60,6 +61,12 @@ function App() {
   usersAPI.login('111', '12345')
       .then(data => console.log(data))
       .catch(error => console.log(error))
+
+
+    // fetch('https://google.com')
+    //     .then((data)=> {
+    //       console.log(data.url)
+    //     })
 
 
   const names = ["Dimych", "Sveta", "Ivan", "Daniil", "Ignat", "Viktor"]
