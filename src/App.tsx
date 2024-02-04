@@ -23,14 +23,13 @@ function App() {
   //     .then(data=>  console.log(data) )
   //     .catch(error =>  console.warn(error))
 
-
-  function wait(ms: number) {
-    return new Promise<void>(resolve=> {
-        setTimeout(()=> {
-          resolve()
-        }, ms)
-    })
-  }
+function wait(ms: number) {
+  return new Promise<void>((res)=> {
+    setTimeout(()=> {
+    res()
+    }, ms)
+  })
+}
 
   async function run () {
     await wait(500)

@@ -40,7 +40,100 @@
 
     console.log('hi')
   </script>
-    <div id="root"></div>
+  <script>
+    //     let myPromise = new Promise((res) => {
+    //
+    //      let randomValue = Math.random()
+    //      setTimeout(()=> {
+    //       res(randomValue)
+    //      }, 1000)
+    //
+    //
+    //         console.log(1)
+    //         console.log(2)
+    //         console.log(3)
+    //
+    // });
+    //
+    //
+    // myPromise.then(( res) => {
+    //      console.log("subscriber1 " + res);
+    // })
+    //
+    //     myPromise.then(( res) => {
+    //      console.log("subscriber2 " + res);
+    //     })
+    //
+    //
+    //     const doAfter = (ms) => {
+    //       return new Promise((resolve, reject)=> {
+    //         setTimeout(()=> {
+    //          resolve()
+    //         }, ms * 1000)
+    //       })
+    //     }
+
+
+    // doAfter(5).then( () => console.log('я сработал через 5 секунд') );
+    // doAfter(3).then( () => console.log('а я сработал через 3 секунд') );
+    // doAfter(10).then( () => console.log('я сработал через 10 секунд') )
+
+
+    // let promise3 = doAfter(3);
+    // promise3.then( () => console.log('я сработал через 3 секунд') );
+    // promise3.then( () => console.log('и я тоже следом сработал через 3 секунд') );
+    // promise3.then( () => console.log('и я') );
+
+    // api.sendStudentsCountToItKamasutra(20)
+    //     .then(res => {
+    //         console.log(res);
+    //         return res.data.requestedCount
+    //     })
+    //     .then((res)=> console.log(res));
+
+
+    // let vacancies = 0;
+    //
+    // api.getVacanciesCountFromMicrosoft()
+    //     .then(data => {
+    //         // console.log(data.data.vacancies);
+    //         vacancies += data.data.vacancies;
+    //         // console.log(vacancies)
+    //         return  api.getVacanciesCountFromGoogle()
+    //     }).then((res)=> {
+    //     vacancies += res.data.vacancies
+    //     return api.sendStudentsCountToItKamasutra(vacancies)
+    // }).then(data => {
+    //         console.log(data.data.requestedCount);
+    //         //setVacanciesCountToItKamasutra(data.data.requestedCount)
+    //     });
+
+
+    // let mcPromise = api.getVacanciesCountFromMicrosoft()
+    // let gPromise = api.getVacanciesCountFromGoogle()
+    //
+    // Promise.all([mcPromise, gPromise]).then((res)=> {
+    //     return res[0].data.vacancies + res[1].data.vacancies
+    // }).then((res)=> {
+    //      api.sendStudentsCountToItKamasutra(res).then(data => {
+    //          console.log(data);
+    //      });
+    // })
+
+
+    // api.getVacanciesCountFromMicrosoft()
+    //     .then((res)=> {
+    //         console.log(res)
+    //     })
+    //
+    //
+    // api.getVacanciesCountFromGoogle()
+    //     .then(res => console.log(res))
+
+
+  </script>
+
+  <div id="root"></div>
 
   </body>
 </html>
